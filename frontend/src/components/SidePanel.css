@@ -1,0 +1,28 @@
+/* frontend/src/components/SidePanel.css */
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-right: 1px solid #333;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.side-panel button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.side-panel button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}

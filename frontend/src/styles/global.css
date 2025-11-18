@@ -1,0 +1,162 @@
+/* RESET + BASE */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0f0;
+}
+
+/* CONTAINERS */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+button {
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(0, 255, 255, 0.3);
+}
+
+button:hover {
+  background-color: #333;
+  border-color: #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+/* INPUTS */
+input[type="range"] {
+  width: 300px;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+/* COMPONENT PANELS */
+.panel {
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(255,255,255,0.1);
+  padding: 10px;
+  margin: 5px;
+}
+
+/* DECKS */
+.deck {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 5px #0ff;
+}
+
+/* PLAYLIST */
+.playlist {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* WAVEFORMS + PANELS */
+.waveform {
+  border-radius: 8px;
+  box-shadow: 0 0 8px #0ff;
+  margin-bottom: 5px;
+}
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 5px #0ff;
+    }
+    50% {
+        box-shadow: 0 0 20px #0ff;
+    }
+    100% {
+        box-shadow: 0 0 5px #0ff;
+    }
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #f0f;
+    border-color: #f0f;
+}
+
+/* ========== THEME SKINS ========== */
+.theme-dark {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.theme-neon {
+    background-color: #000;
+    color: #39ff14;
+}
+
+.theme-vinyl {
+    background-color: #222;
+    color: #f0e68c;
+}
+
+/* === THEMES === */
+body.default {
+    background-color: #111;
+    color: white;
+}
+
+body.neon {
+    background-color: #000;
+    color: #39ff14;
+}
+
+body.vinyl {
+    background-color: #282828;
+    color: #e0e0e0;
+}
+.animated-glow {
+  animation: glow 1.5s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0%   { box-shadow: 0 0 4px #e0f; }
+  50%  { box-shadow: 0 0 12px #e0f; }
+  100% { box-shadow: 0 0 4px #e0f; }
+}

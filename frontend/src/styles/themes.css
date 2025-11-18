@@ -1,0 +1,14 @@
+.theme-dark {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.theme-light {
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+.theme-neon {
+    background-color: black;
+    color: #00ffea;
+}

@@ -1,0 +1,28 @@
+/* frontend/src/components/PlaylistPanel.css */
+.playlist-panel {
+    background-color: #1f1f1f;
+    border-top: 1px solid #333;
+    padding: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.playlist-panel h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.playlist-panel button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.playlist-panel button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}

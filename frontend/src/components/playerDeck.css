@@ -1,0 +1,33 @@
+/* frontend/src/components/PlayerDeck.css */
+.player-deck {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+}
+
+.player-deck h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.player-deck button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.player-deck button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
