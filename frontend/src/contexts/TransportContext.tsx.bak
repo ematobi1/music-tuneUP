@@ -1,0 +1,29 @@
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { db } from "../firebase/firebaseConfig";
+import { doc, onSnapshot, updateDoc } from "firebase/firestore";
+import { getDoc, setDoc } from "firebase/firestore";
+const TransportContext = createContext<any>(null);
+export const useTransport = () => useContext(TransportContext);
+export const TransportProvider = ({ sessionId, children }: any) => {
+  const [position, setPosition] = useState(0);
+  const [status, setStatus] = useState("stopped");
+  const [loopRegion, setLoopRegion] = useState<[number, number] | null>(null);
+  const [editLock, setEditLock] = useState(false);
+  const ref = doc(db, "sessions", sessionId || "default-session");
+  useEffect(() => {
+    const ensureDoc = async () => {
+      const docSnap = await getDoc(ref);
+      if (!docSnap.exists()) {
+        await setDoc(ref, { transport: { status: "stopped", position: 0 } });
+      }
+    };
+    ensureDoc();
+    const unsub = onSnapshot(ref, (snap) => {
+      const data = snap.data();
+      if (data?.transport) {
+        setPosition(data.transport.position);
+        setStatus(data.transport.status);
+      }
+    });
+    return () => unsub();
+  }, [sessionId]);
