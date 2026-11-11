@@ -1,19 +1,16 @@
 /**
- * Import function triggers from their respective submodules:
+ * Cloud Functions entry point.
  *
- * import {onCall} from "firebase-functions/v2/https";
- * import {onDocumentWritten} from "firebase-functions/v2/firestore";
+ * No functions are deployed yet. Add triggers here, e.g.:
  *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
+ *   import {onRequest} from "firebase-functions/v2/https";
+ *   import * as logger from "firebase-functions/logger";
+ *
+ *   export const health = onRequest((req, res) => {
+ *     logger.info("health check");
+ *     res.send("ok");
+ *   });
+ *
+ * See https://firebase.google.com/docs/functions/typescript
  */
-
-import {onRequest} from "firebase-functions/v2/https";
-import * as logger from "firebase-functions/logger";
-
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
-
-// export const helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+export {};
